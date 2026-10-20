@@ -1,22 +1,225 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Budget Bot</title>
-  <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; background: #f4f6fa; color: #1f2937; }
-    main { max-width: 640px; margin: 0 auto; padding: 48px 24px; }
-    h1 { font-size: 28px; }
-    a { color: #2563eb; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Budget Master — Controla tus gastos hablando</title>
+  <meta name="description" content="Budget Master es una aplicación web para registrar y controlar tus gastos e ingresos por voz o texto. 30 días gratis y después 4,99 € en un pago único.">
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
-    <h1>Budget Bot</h1>
-    <p>Asistente personal de control de gastos e ingresos. Registra tus movimientos mediante mensajes de texto o notas de voz a través de Telegram, los clasifica automáticamente y los guarda en tu propia hoja de cálculo de Google Sheets.</p>
-    <p>Este sitio solo sirve como identificación de la aplicación ante Google (pantalla de consentimiento de OAuth).</p>
-    <p><a href="privacy.html">Política de privacidad</a></p>
-  </main>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="./"><img src="logo.png" alt="Budget Master" width="34" height="34"><span>Budget Master</span></a>
+    <nav>
+      <a href="#producto">Producto</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#precio">Precio</a>
+      <a href="#faq">Preguntas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-sm" href="https://51-170-45-164.sslip.io" target="_blank" rel="noopener">Abrir la app</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-in">
+      <div>
+        <span class="pill">Aplicación web instalable (PWA)</span>
+        <h1>Tus gastos, por voz y en segundos</h1>
+        <p class="lead">
+          Budget Master registra y organiza tus gastos e ingresos cuando se lo cuentas hablando o
+          escribiendo. Categorías automáticas, presupuesto mensual, gastos recurrentes, metas de ahorro
+          y cuentas compartidas. Tus datos, cifrados y solo tuyos.
+        </p>
+        <div class="cta">
+          <a class="btn" href="https://51-170-45-164.sslip.io" target="_blank" rel="noopener">Empezar gratis</a>
+          <a class="btn btn-ghost" href="#precio">Ver el precio</a>
+        </div>
+        <p class="tiny">30 días gratis · después <b>4,99 € en un pago único</b> · sin suscripciones</p>
+      </div>
+
+      <div class="mock" aria-hidden="true">
+        <div class="phone">
+          <div class="screen">
+            <div class="top"><b>Chat</b> · cuenta personal</div>
+            <div class="bub me">gasto de 25 euros en cena con amigos ayer</div>
+            <div class="bub bot">✅ Gasto guardado
+              <small>Alimentación · Restaurantes y cenas · 25,00 €</small>
+            </div>
+            <div class="bub me">supermercado 45,20 el lunes y cine 12</div>
+            <div class="bub bot">✅ 2 gastos guardados
+              <small>Supermercado 45,20 € · Ocio 12,00 €</small>
+            </div>
+            <div class="bub me">🎤 audio: ingreso de 1.800 de nómina</div>
+            <div class="bub bot">✅ Ingreso guardado
+              <small>Nómina Ayesa · +1.800,00 €</small>
+            </div>
+            <div class="mic-row"><div class="bar"></div><div class="ico">🎤</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="producto">
+    <div class="wrap">
+      <h2>Qué es Budget Master</h2>
+      <p class="sub">
+        Un gestor de finanzas personales pensado para usarlo en el móvil, en segundos. Sin hojas de
+        cálculo ni formularios: le cuentas lo que has gastado y la app lo clasifica sola.
+      </p>
+      <div class="grid">
+        <div class="card"><span class="em">🎤</span><h3>Por voz o texto</h3>
+          <p>«Cena 30 y gasolina 50» o una nota de voz. La app entiende fechas, importes y varios gastos en un mismo mensaje.</p></div>
+        <div class="card"><span class="em">🏷️</span><h3>Categorías automáticas</h3>
+          <p>Cada movimiento se clasifica en tus categorías y subcategorías, con etiqueta de deseo (wants) o necesidad (needs).</p></div>
+        <div class="card"><span class="em">📊</span><h3>Presupuesto y 50/30/20</h3>
+          <p>Consulta gasto real, comprometido y previsión de cierre del mes, con tu meta de ahorro.</p></div>
+        <div class="card"><span class="em">🔁</span><h3>Recurrentes y futuros</h3>
+          <p>Alquiler, suscripciones o un cargo puntual: se descuentan del presupuesto en su fecha.</p></div>
+        <div class="card"><span class="em">🎯</span><h3>Metas de ahorro</h3>
+          <p>Define un objetivo y una fecha; la app calcula cuánto necesitas apartar cada mes.</p></div>
+        <div class="card"><span class="em">👥</span><h3>Cuentas compartidas</h3>
+          <p>Gestiona tu cuenta personal y una compartida con otra persona, cada una con sus datos.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como">
+    <div class="wrap">
+      <h2>Cómo funciona</h2>
+      <p class="sub">Tres pasos y ya está. No hace falta tarjeta para empezar.</p>
+      <div class="steps">
+        <div class="step">
+          <h3>Crea tu cuenta</h3>
+          <p>Entra en la web con un usuario y contraseña. Tu prueba gratuita de 30 días empieza en ese momento.</p>
+        </div>
+        <div class="step">
+          <h3>Habla o escribe</h3>
+          <p>«gasto de 12,50 en uber eats ayer». La app lo entiende, lo clasifica y lo guarda al instante.</p>
+        </div>
+        <div class="step">
+          <h3>Instálala en el móvil</h3>
+          <p>Añádela a la pantalla de inicio y úsala como una app, a pantalla completa y sin navegador.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="precio">
+    <div class="wrap">
+      <h2>Precio claro: pagas una vez</h2>
+      <p class="sub">Sin suscripciones, sin cargos mensuales y sin sorpresas. Empiezas gratis y decides después.</p>
+      <div class="price-wrap">
+        <div class="price-card">
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
+            <span class="badge badge-green">30 días gratis</span>
+            <span class="badge badge-amber">Sin suscripción</span>
+          </div>
+          <div class="price-top">
+            <span class="price-big">4,99 €</span>
+            <span class="price-note">pago único · impuestos incluidos</span>
+          </div>
+          <p style="margin:0;color:var(--muted);font-size:14px">Acceso de por vida a la aplicación con tu cuenta y todos tus datos.</p>
+          <ul class="price-list">
+            <li>30 días de prueba completa, sin tarjeta</li>
+            <li>Tras la prueba, pago único de 4,99 € (no se renueva)</li>
+            <li>Todos tus datos se conservan siempre</li>
+            <li>Gastos, ingresos, planes, metas y cuentas compartidas</li>
+            <li>Chat de voz y texto sin límites</li>
+            <li class="off">Sin anuncios y sin venta de datos</li>
+          </ul>
+          <a class="btn" href="https://51-170-45-164.sslip.io" target="_blank" rel="noopener">Crear cuenta gratis</a>
+          <div class="pay-row">
+            <span class="pay-chip">Tarjeta</span>
+            <span class="pay-chip">Apple Pay</span>
+            <span class="pay-chip">Google Pay</span>
+            <span class="pay-chip">Pago seguro con Stripe</span>
+          </div>
+        </div>
+        <div class="side">
+          <div class="note">
+            <b>Si no pagas, no pierdes nada.</b> Al terminar los 30 días tu cuenta pasa a
+            <b>solo lectura</b>: puedes seguir consultando todos tus movimientos, pero no añadir ni
+            editar hasta que hagas el pago único.
+          </div>
+          <div class="card">
+            <h3>¿Necesitas factura?</h3>
+            <p>Indica tu email al pagar y te enviamos el recibo. Para factura con tus datos fiscales,
+              escríbenos y te la emitimos.</p>
+          </div>
+          <div class="card">
+            <h3>Reembolsos</h3>
+            <p>Consulta nuestra <a href="reembolsos.html">política de reembolsos</a>. Al ser un
+              contenido digital, se aplica el derecho de desistimiento de 14 días con las condiciones
+              indicadas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>Preguntas frecuentes</h2>
+      <p class="sub">Lo que más nos preguntan antes de empezar.</p>
+      <div class="faq">
+        <details><summary>¿Es una suscripción?</summary>
+          <p>No. Pagas 4,99 € una sola vez y tienes acceso de por vida. No hay renovaciones ni cargos
+            recurrentes.</p></details>
+        <details><summary>¿Qué pasa cuando terminan los 30 días gratis?</summary>
+          <p>Sigues entrando y viendo todos tus datos en modo solo lectura. No se borra nada. Para
+            volver a añadir o editar, haces el pago único cuando quieras.</p></details>
+        <details><summary>¿Cómo puedo pagar?</summary>
+          <p>Con tarjeta de débito o crédito, Apple Pay o Google Pay, a través de Stripe. No necesitas
+            cuenta en Stripe ni en PayPal. Los datos de tu tarjeta los gestiona Stripe; nosotros no los
+            almacenamos.</p></details>
+        <details><summary>¿Tengo que instalar algo?</summary>
+          <p>No. Funciona en el navegador. Si quieres, puedes añadirla a la pantalla de inicio del móvil
+            y se abre como una app.</p></details>
+        <details><summary>¿Dónde están mis datos?</summary>
+          <p>En un servidor propio dentro de la Unión Europea, cifrados en reposo. Tus notas de voz se
+            procesan para transcribirlas y se eliminan: no se almacena el audio.</p></details>
+        <details><summary>¿Puedo borrar mi cuenta?</summary>
+          <p>Sí. Escríbenos desde el email con el que te registraste y eliminamos tu cuenta y tus datos.
+            Más información en la <a href="privacy.html">política de privacidad</a>.</p></details>
+        <details><summary>¿La app está en español?</summary>
+          <p>Sí, está pensada para español: entiende frases naturales como «ayer pagué 20 en el
+            supermercado» o «gasto recurrente de 10 de Spotify cada mes».</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <h2>Contacto</h2>
+          <p>¿Dudas antes de pagar, facturas o soporte? Escríbenos y te respondemos en 24-48 h laborables.</p>
+        </div>
+        <a class="btn" href="mailto:dgarciagarrigo@gmail.com?subject=Budget%20Master">dgarciagarrigo@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <div>© 2026 Budget Master · Hecho en España · Pagos con Stripe</div>
+    <div class="foot-links">
+      <a href="terminos.html">Términos y condiciones</a>
+      <a href="privacy.html">Privacidad</a>
+      <a href="reembolsos.html">Reembolsos</a>
+      <a href="aviso-legal.html">Aviso legal</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

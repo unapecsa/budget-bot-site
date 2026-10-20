@@ -1,50 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Budget Bot — Política de privacidad</title>
-  <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; background: #f4f6fa; color: #1f2937; }
-    main { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
-    h1 { font-size: 24px; }
-    h2 { font-size: 18px; margin-top: 28px; }
-    p, li { line-height: 1.6; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de privacidad — Budget Master</title>
+  <meta name="robots" content="index,follow">
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="./"><img src="logo.png" alt="Budget Master" width="34" height="34"><span>Budget Master</span></a>
+    <a class="btn btn-sm" href="https://51-170-45-164.sslip.io" target="_blank" rel="noopener">Abrir la app</a>
+  </div>
+</header>
+
+<main class="legal">
+  <div class="wrap">
+    <a class="back" href="./">← Volver al inicio</a>
     <h1>Política de privacidad</h1>
-    <p><strong>Última actualización:</strong> 19 de septiembre de 2026.</p>
+    <p class="updated">Última actualización: 20 de octubre de 2026</p>
 
-    <h2>1. Responsable</h2>
-    <p>Budget Bot es una aplicación personal de gestión de gastos e ingresos. Se sirve mediante un bot de Telegram que pertenece a su propietario ("el Responsable"). Solo el Responsable y las personas que él autorice explícitamente pueden utilizarla.</p>
+    <p>
+      Esta política explica qué datos personales tratamos cuando usas <strong>Budget Master</strong>, con
+      qué finalidad, durante cuánto tiempo y cómo puedes ejercer tus derechos, conforme al Reglamento (UE)
+      2016/679 (RGPD) y a la Ley Orgánica 3/2018 (LOPDGDD).
+    </p>
 
-    <h2>2. Datos que se procesan</h2>
-    <p>Para funcionar, la aplicación procesa:</p>
+    <h2>1. Responsable del tratamiento</h2>
+    <table>
+      <tr><th>Responsable</th><td>Budget Master</td></tr>
+      <tr><th>País</th><td>España</td></tr>
+      <tr><th>Contacto</th><td><a href="mailto:dgarciagarrigo@gmail.com">dgarciagarrigo@gmail.com</a></td></tr>
+    </table>
+
+    <h2>2. Qué datos tratamos</h2>
+    <h3>Datos de cuenta</h3>
     <ul>
-      <li>Los <strong>mensajes de texto y notas de voz</strong> que el usuario envía al bot, con el fin de registrar los movimientos (gasto o ingreso) que contengan: importe, concepto, categoría y fecha.</li>
-      <li>El <strong>identificador interno del usuario de Telegram</strong> y el identificador del chat, para asociar cada registro con su propietario.</li>
+      <li>Nombre de usuario y contraseña (guardada con <strong>hash criptográfico</strong>, nunca en claro).</li>
+      <li>Nombre visible, avatar (opcional) y rol dentro de la aplicación.</li>
+      <li>Dirección IP y datos técnicos en los registros del servidor (seguridad y diagnóstico).</li>
     </ul>
-    <p>Las notas de voz se transcriben de forma local en el dispositivo del Responsable y no se comparten con terceros.</p>
+    <h3>Datos financieros que tú introduces</h3>
+    <ul>
+      <li>Movimientos (fecha, concepto, importe, categoría, subcategoría, etiqueta deseo/necesidad).</li>
+      <li>Gastos recurrentes y futuros, metas de ahorro y ajustes de cada cuenta.</li>
+      <li>Mensajes del chat de texto.</li>
+    </ul>
+    <p>
+      Estos datos se almacenan <strong>cifrados en reposo</strong> (AES) en el servidor. Solo tú (y las
+      personas con las que compartas una cuenta compartida) puedes verlos a través de la aplicación.
+    </p>
+    <h3>Notas de voz</h3>
+    <ul>
+      <li>El audio se envía al servidor únicamente para <strong>transcribirlo</strong> y extraer el
+        movimiento.</li>
+      <li>La transcripción se convierte en un movimiento (o mensaje de chat).</li>
+      <li><strong>El archivo de audio se elimina</strong> tras el procesado: no se almacena ni se usa para
+        otros fines.</li>
+    </ul>
+    <h3>Datos de pago</h3>
+    <ul>
+      <li>El pago lo procesa <strong>Stripe Payments Europe, Ltd.</strong> Recibimos el identificador del
+        pago, el importe, la moneda y el estado, y opcionalmente el email que indiques para el recibo.</li>
+      <li><strong>Nunca</strong> recibimos ni almacenamos los datos de tu tarjeta.</li>
+    </ul>
 
-    <h2>3. Almacenamiento</h2>
-    <p>Los registros se almacenan en una <strong>hoja de cálculo de Google Sheets privada</strong> del Responsable y en una base de datos local. El acceso a esa hoja está restringido únicamente a las cuentas de Google autorizadas.</p>
+    <h2>3. Finalidad y base legal</h2>
+    <table>
+      <tr><th>Finalidad</th><th>Base legal</th></tr>
+      <tr><td>Prestarte el servicio y guardar tus movimientos</td><td>Ejecución de un contrato (art. 6.1.b RGPD)</td></tr>
+      <tr><td>Gestionar el pago único y el acceso de por vida</td><td>Ejecución de un contrato</td></tr>
+      <tr><td>Seguridad, prevención de abusos y logs técnicos</td><td>Interés legítimo (art. 6.1.f)</td></tr>
+      <tr><td>Usar el micrófono para transcribir tus notas de voz</td><td>Consentimiento (permiso del navegador)</td></tr>
+    </table>
 
-    <h2>4. Finalidad y base</h2>
-    <p>Los datos se utilizan exclusivamente para la gestión personal de las finanzas del Responsable (y de las personas autorizadas), así como para mostrar estadísticas. No se utilizan para fines publicitarios ni de elaboración de perfiles.</p>
+    <h2>4. Destinatarios</h2>
+    <ul>
+      <li><strong>Stripe Payments Europe, Ltd.</strong> — procesamiento de pagos.</li>
+      <li><strong>Proveedor de alojamiento</strong> (servidor propio en la UE) — alojamiento de la aplicación.</li>
+      <li><strong>GitHub, Inc.</strong> — alojamiento de este sitio informativo.</li>
+    </ul>
+    <p>
+      No vendemos ni cedemos tus datos a terceros con fines publicitarios. Solo se comunican a los
+      proveedores necesarios para prestar el servicio o cuando lo exija la ley.
+    </p>
 
-    <h2>5. Comunicación de datos a terceros</h2>
-    <p>No compartimos ni vendemos los datos a terceros. La transmisión con Google y Telegram se realiza únicamente para prestar el servicio descrito.</p>
+    <h2>5. Conservación</h2>
+    <ul>
+      <li>Los datos de tu cuenta y tus movimientos se conservan mientras la cuenta exista.</li>
+      <li>Si no realizas el pago tras la prueba, la cuenta pasa a <strong>solo lectura</strong> y los datos
+        <strong>no se borran</strong>.</li>
+      <li>Puedes solicitar la eliminación de tu cuenta y tus datos en cualquier momento.</li>
+      <li>Los datos de facturación se conservan durante los plazos legales aplicables.</li>
+    </ul>
 
-    <h2>6. Conservación y supresión</h2>
-    <p>Los datos se conservan mientras el Responsable mantenga la aplicación. El usuario puede solicitar la supresión de sus registros en cualquier momento. Los registros pueden eliminarse desde el propio bot ("borra el último registro").</p>
+    <h2>6. Tus derechos</h2>
+    <p>Puedes ejercer, escribiendo a nuestro correo de contacto, los derechos de:</p>
+    <ul>
+      <li><strong>Acceso</strong> a tus datos.</li>
+      <li><strong>Rectificación</strong> de datos inexactos.</li>
+      <li><strong>Supresión</strong> («derecho al olvido»).</li>
+      <li><strong>Portabilidad</strong> (copia de tus datos en un formato legible).</li>
+      <li><strong>Limitación</strong> u <strong>oposición</strong> al tratamiento.</li>
+    </ul>
+    <p>
+      Responderemos en el plazo máximo de un mes. Si no estás conforme, puedes reclamar ante la
+      <strong>Agencia Española de Protección de Datos</strong> (www.aepd.es).
+    </p>
 
-    <h2>7. Derechos</h2>
-    <p>El usuario puede solicitar el acceso, la rectificación o la supresión de sus datos escribiendo al Responsable a través del propio bot.</p>
+    <h2>7. Cookies y almacenamiento local</h2>
+    <p>
+      Este sitio no utiliza cookies publicitarias ni de seguimiento. La aplicación usa
+      <strong>almacenamiento local del navegador</strong> (localStorage) para mantener tu sesión iniciada y
+      recordar preferencias (tema, cuenta activa, permiso de micrófono). Puedes borrarlo desde los ajustes
+      de tu navegador.
+    </p>
 
-    <h2>8. Contacto</h2>
-    <p>Para cualquier duda sobre esta política, contacta con el Responsable mediante el bot de Telegram.</p>
-  </main>
+    <h2>8. Seguridad</h2>
+    <ul>
+      <li>Conexiones cifradas con <strong>HTTPS</strong>.</li>
+      <li>Datos financieros <strong>cifrados en reposo</strong> (AES/Fernet).</li>
+      <li>Contraseñas con <strong>hash</strong> (PBKDF2) y sesiones con tokens.</li>
+      <li>Acceso al servidor restringido al personal autorizado.</li>
+    </ul>
+
+    <h2>9. Menores</h2>
+    <p>El servicio no está dirigido a menores de 14 años. Si detectamos una cuenta de un menor, la eliminaremos.</p>
+
+    <h2>10. Versión anterior con Google Sheets (bot de Telegram)</h2>
+    <p>
+      Una versión anterior del servicio (<em>Budget Bot</em>) permitía guardar los movimientos en una hoja
+      de cálculo de Google propiedad del propio usuario, previa autorización OAuth. En ese caso:
+    </p>
+    <ul>
+      <li>Solo se accedía a <strong>tu propia hoja de Google Sheets</strong> para escribir y leer tus
+        movimientos.</li>
+      <li>No se compartían ni se usaban esos datos para otros fines.</li>
+      <li>Puedes revocar el acceso en <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>.</li>
+    </ul>
+    <p>Esta versión no está en uso en la aplicación actual, que almacena los datos en su propio servidor.</p>
+
+    <h2>11. Cambios en esta política</h2>
+    <p>
+      Podemos actualizar esta política por cambios legales o del servicio. La fecha de la última
+      actualización aparece al inicio. Los cambios relevantes se comunicarán dentro de la aplicación.
+    </p>
+
+    <h2>12. Contacto</h2>
+    <p>Para cualquier cuestión sobre privacidad: <a href="mailto:dgarciagarrigo@gmail.com">dgarciagarrigo@gmail.com</a>.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <div>© 2026 Budget Master · Hecho en España · Pagos con Stripe</div>
+    <div class="foot-links">
+      <a href="terminos.html">Términos</a>
+      <a href="privacy.html">Privacidad</a>
+      <a href="reembolsos.html">Reembolsos</a>
+      <a href="aviso-legal.html">Aviso legal</a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
