@@ -37,8 +37,8 @@ a:hover { text-decoration: underline; }
   border-bottom: 1px solid var(--line);
 }
 .nav-in { display: flex; align-items: center; gap: 18px; padding: 12px 0; }
-.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 16px; color: var(--text); }
-.brand img { border-radius: 9px; display: block; }
+.brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 22px; letter-spacing: -.01em; color: var(--text); }
+.brand img { width: 52px; height: 52px; border-radius: 13px; display: block; }
 .nav nav { display: flex; gap: 16px; margin-left: auto; font-size: 14px; }
 .nav nav a { color: var(--muted); }
 .nav nav a:hover { color: var(--text); text-decoration: none; }
@@ -62,7 +62,7 @@ a:hover { text-decoration: underline; }
 
 /* ── Hero ── */
 .hero { padding: 66px 0 40px; }
-.hero-in { display: grid; grid-template-columns: 1.15fr .85fr; gap: 44px; align-items: center; }
+.hero-in { display: grid; grid-template-columns: 1.1fr .9fr; gap: 44px; align-items: start; }
 .pill {
   display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .02em;
   color: #c7d2fe; background: rgba(99, 102, 241, .14);
@@ -75,24 +75,14 @@ h1 { font-size: clamp(30px, 5vw, 46px); line-height: 1.12; margin: 0 0 14px; let
 .tiny { font-size: 13px; color: var(--muted); margin: 0; }
 .tiny b { color: var(--text); }
 
-/* ── Móvil de muestra (CSS, sin imágenes) ── */
-.mock { display: flex; justify-content: center; }
-.phone {
-  width: min(300px, 100%); border-radius: 34px; padding: 12px;
-  background: linear-gradient(160deg, #1b2440, #0c1224);
-  border: 1px solid var(--line);
-  box-shadow: 0 30px 70px rgba(0, 0, 0, .5), inset 0 0 0 1px rgba(255, 255, 255, .03);
+/* ── Capturas reales de la app (móvil), apiladas ── */
+.shots { display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.shots img {
+  display: block; width: min(220px, 100%); height: auto;
+  border-radius: 22px; border: 1px solid var(--line);
+  background: #0a0f1e;
+  box-shadow: 0 26px 60px rgba(0, 0, 0, .55), inset 0 0 0 1px rgba(255, 255, 255, .03);
 }
-.screen { background: #0a0f1e; border-radius: 24px; padding: 14px 12px; min-height: 330px; display: flex; flex-direction: column; gap: 9px; }
-.screen .top { display: flex; align-items: center; gap: 8px; padding-bottom: 8px; border-bottom: 1px solid #1b2440; font-size: 12px; color: var(--muted); }
-.screen .top b { color: var(--text); font-size: 13px; }
-.bub { max-width: 90%; padding: 8px 11px; border-radius: 12px; font-size: 12.5px; line-height: 1.45; }
-.bub.me { align-self: flex-end; background: linear-gradient(135deg, #4f46e5, #6d28d9); color: #fff; border-bottom-right-radius: 4px; }
-.bub.bot { align-self: flex-start; background: #141d33; border: 1px solid #22304d; border-bottom-left-radius: 4px; }
-.bub small { display: block; color: #9aa8c7; font-size: 11px; margin-top: 3px; }
-.mic-row { margin-top: auto; display: flex; gap: 8px; padding-top: 10px; }
-.mic-row .bar { flex: 1; height: 34px; border-radius: 10px; background: #101a30; border: 1px solid #22304d; }
-.mic-row .ico { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: #2a1c22; border: 1px solid #4a2b33; color: #f7a8a8; font-size: 15px; }
 
 /* ── Secciones ── */
 section { padding: 44px 0; }
@@ -189,7 +179,8 @@ footer { border-top: 1px solid var(--line); margin-top: 30px; padding: 26px 0 40
 
 @media (max-width: 860px) {
   .hero-in { grid-template-columns: 1fr; gap: 26px; }
-  .mock { order: 2; }
+  .shots { order: 2; }
+  .hero-in { gap: 34px; }
   .grid { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: 1fr; }
   .price-wrap { grid-template-columns: 1fr; }
@@ -199,4 +190,8 @@ footer { border-top: 1px solid var(--line); margin-top: 30px; padding: 26px 0 40
   .grid { grid-template-columns: 1fr; }
   .hero { padding-top: 40px; }
   .price-big { font-size: 40px; }
+  .nav-in { padding: 9px 0; gap: 12px; }
+  .brand { font-size: 19px; gap: 9px; }
+  .brand img { width: 42px; height: 42px; border-radius: 11px; }
+  .shots img { width: min(240px, 76vw); }
 }
